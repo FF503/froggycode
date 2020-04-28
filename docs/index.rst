@@ -1,19 +1,12 @@
-Welcome to Frog Force 503's 2020 Code Documentation!
-====================================================
+Welcome
+=======
 
-Contents:
+Welcome to Frog Force 503's code documentation! This site is designed to teach readers about coding conventions used on Team 503.
+
+Refer to the table of contents below to get started.
 
 .. toctree::
    :maxdepth: 2
-   :glob:
+   :caption: Getting Started
 
-   *
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   getting_started

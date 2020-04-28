@@ -7,3 +7,9 @@ Contribute
 ----------
 
 Visit `<https://github.com/FF503/froggycode>`_.
+
+Authors
+-------
+
+* James Chen
+* Joshua Huang

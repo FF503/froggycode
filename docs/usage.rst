@@ -1,7 +1,8 @@
-========
-Usage
-========
+==========
+Robot.java
+==========
 
-To use this template, simply update it::
+.. code-block:: java
+   :linenos:
 
-	import read-the-docs-template
+   System.out.println("Test java syntax")
