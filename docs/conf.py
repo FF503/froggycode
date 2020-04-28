@@ -12,6 +12,7 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
+import sphinx_rtd_theme
 import sys
 import os
 
@@ -67,7 +68,7 @@ release = '1.0'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build']
+exclude_patterns = ['_build', '.DS_Store']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -98,15 +99,24 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'default'
+html_theme = 'sphinx_rtd_theme'
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_show_sphinx = False
+html_show_sourcelink = False
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+html_theme_options = {
+   'collapse_navigation': False,
+    'display_version': False,
+    'navigation_depth': 3,
+    'logo_only': True,
+    'sticky_navigation': False,
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
+html_theme_path = ['theme_overrides.css']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -117,17 +127,20 @@ html_theme = 'default'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = None
+html_logo = 'img/logos/logo.jpg'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = 'favicon.png'
+html_favicon = 'img/logos/favicon.png'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+def setup(app):
+    app.add_stylesheet('theme_overrides.css') 
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
